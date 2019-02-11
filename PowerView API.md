@@ -13,7 +13,7 @@ your router's manual for instructions.
 All API request and response data uses the `application/json` content type.
 
 This document uses `UPPERCASE` letters in URLs to indicate a variable field.
-For example, in `GET http://powerview/api/shade/SHADE_ID` the `SHADE_ID` is the
+For example, in `GET http://powerview/api/shades/SHADE_ID` the `SHADE_ID` is the
 variable field that would be filled in with a shade ID number.
 
 ### Hub discovery
@@ -62,16 +62,16 @@ Returns all shade data.  The response contains two top-level keys.  `shadeData`
 contains an array of shade objects while the `shadeIds` contains an array of
 shade IDs.
 
-`GET http://powerview/api/shade/SHADE_ID`
+`GET http://powerview/api/shades/SHADE_ID`
 
 Returns the shade object for a single shade in the `shade` key and all other
 shades in the `shadeData` key.
 
-`GET http://powerview/api/shade/SHADE_ID?updateBatteryLevel=true`
+`GET http://powerview/api/shades/SHADE_ID?updateBatteryLevel=true`
 
 Updates the battery level of the shade.  This will jog the shade.
 
-`PUT http://powerview/api/shade/SHADE_ID`
+`PUT http://powerview/api/shades/SHADE_ID`
 
 With a shade object with a `positions` object, sets the shade position.
 
